@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        text-align: center;
+        color: #fff;
+    }
+
+    .page {
+        display: none;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4d6d;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        background: #ff1e4d;
+    }
+
+    .no-btn {
+        background: grey;
+        cursor: not-allowed;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+</style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page active" id="page1">
+    <h1>Hey Cutie 🥰</h1>
+    <p>Someone has something special for you 💖</p>
+    <button onclick="nextPage(2)">Click Here 👉</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <h1>Just one question… 😳</h1>
+    <p>Are you ready?</p>
+    <button onclick="nextPage(3)">Yes ❤️</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+    <h1>Will You Be Mine? 💍💖</h1>
+    <button onclick="nextPage(4)">YES 😍</button>
+    <button class="no-btn">No 😜</button>
+</div>
+
+<!-- Page 4 -->
+<div class="page" id="page4">
+    <h1>Yayyyyy!!! 🥰💃</h1>
+    <p>You just made me the happiest person 💕</p>
+    <button onclick="nextPage(5)">Next 💌</button>
+</div>
+
+<!-- Page 5 -->
+<div class="page" id="page5">
+    <h1>Happy Valentine’s Day ❤️</h1>
+    <p>
+        You are my today, my tomorrow,  
+        and my forever 💞  
+        <br><br>
+        I love you endlessly 😘
+    </p>
+    <button onclick="nextPage(1)">Replay 🔁</button>
+</div>
+
+<script>
+    function nextPage(pageNumber) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page' + pageNumber).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
